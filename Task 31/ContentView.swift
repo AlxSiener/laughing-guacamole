@@ -10,6 +10,11 @@ import SwiftUI
 struct ContentView: View {
     @State private var showTrain: Bool = false
     var body: some View {
+        Text("Tap Station")
+            .clipShape(RoundedRectangle(cornerRadius:28.0))
+            .padding(20)
+           
+            .background(Color.gray)
         ZStack {
             
            
@@ -25,7 +30,7 @@ struct ContentView: View {
                         .transition(.move(edge: .leading))
                 }else {
                     VStack{
-                        Text("Show Train")
+                        StationView()
                         
                     }
                 }
