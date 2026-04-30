@@ -10,10 +10,10 @@ import SwiftUI
 struct ContentView: View {
     @State private var showTrain: Bool = false
     var body: some View {
-        VStack {
+        ZStack {
             
-            
-            
+           
+            StationView()
            
             Button{
                withAnimation(.easeOut(duration: 2.5)){
@@ -31,6 +31,7 @@ struct ContentView: View {
                 }
                 
             }
+            
         }
         .padding()
     }
