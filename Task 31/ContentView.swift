@@ -11,7 +11,11 @@ struct ContentView: View {
     @State private var showTrain: Bool = false
     var body: some View {
         VStack {
-            TrainView(showTrain: showTrain)
+            
+            if showTrain {
+                TrainView()
+            }
+            
            Text("welcome to the app")
             Button{
                withAnimation(.easeOut(duration: 2.5)){

@@ -9,12 +9,10 @@ import Foundation
 import SwiftUI
 
 struct TrainView: View {
-    @State  var showTrain: Bool
     var body: some View {
         
         VStack {
             
-            if showTrain {
                 HStack {
                     Image(systemName: "train.side.rear.car")
                     Image(systemName: "train.side.middle.car")
@@ -29,8 +27,8 @@ struct TrainView: View {
         }
     
     }
-}
+
 
 #Preview {
-    TrainView(showTrain:true)
+    TrainView()
 }
