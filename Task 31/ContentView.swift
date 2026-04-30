@@ -12,18 +12,24 @@ struct ContentView: View {
     var body: some View {
         VStack {
             
-            if showTrain {
-                TrainView()
-                    .transition(.move(edge: .leading))
-            }
             
-           Text("welcome to the app")
+            
+           
             Button{
                withAnimation(.easeOut(duration: 2.5)){
                     showTrain = !showTrain
                 }
             } label: {
-                Text("Show Train")
+                if showTrain {
+                    TrainView()
+                        .transition(.move(edge: .leading))
+                }else {
+                    VStack{
+                        Text("Show Train")
+                        
+                    }
+                }
+                
             }
         }
         .padding()
