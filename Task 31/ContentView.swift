@@ -14,6 +14,7 @@ struct ContentView: View {
             
             if showTrain {
                 TrainView()
+                    .transition(.move(edge: .leading))
             }
             
            Text("welcome to the app")

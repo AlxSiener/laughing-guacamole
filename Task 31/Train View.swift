@@ -19,7 +19,6 @@ struct TrainView: View {
                     Image(systemName: "train.side.front.car")
                     
                 }
-                .transition(.move(edge: .leading))
                 .font(.system(size: 80))
                 .foregroundStyle(Color.blue)
             }
