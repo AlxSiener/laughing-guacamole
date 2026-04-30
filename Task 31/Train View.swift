@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct TrainView: View {
-    @State private var showTrain: Bool = false
+    @State  var showTrain: Bool
     var body: some View {
         
         VStack {
@@ -25,18 +25,12 @@ struct TrainView: View {
                 .font(.system(size: 80))
                 .foregroundStyle(Color.blue)
             }
-            Button{
-               withAnimation(.easeOut(duration: 2.5)){
-                    showTrain = !showTrain
-                }
-            } label: {
-                Text("Show Train")
-            }
+            
         }
     
     }
 }
 
 #Preview {
-    TrainView()
+    TrainView(showTrain:true)
 }

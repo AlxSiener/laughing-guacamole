@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var showTrain: Bool = false
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            TrainView(showTrain: showTrain)
+           Text("welcome to the app")
+            Button{
+               withAnimation(.easeOut(duration: 2.5)){
+                    showTrain = !showTrain
+                }
+            } label: {
+                Text("Show Train")
+            }
         }
         .padding()
     }
