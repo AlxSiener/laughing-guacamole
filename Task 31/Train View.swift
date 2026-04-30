@@ -7,16 +7,32 @@
 
 import Foundation
 import SwiftUI
+
 struct TrainView: View {
+    @State private var showTrain: Bool = false
     var body: some View {
-        HStack {
-            Image(systemName: "train.side.rear.car")
-            Image(systemName: "train.side.middle.car")
-            Image(systemName: "train.side.front.car")
-               
+        
+        VStack {
+            
+            if showTrain {
+                HStack {
+                    Image(systemName: "train.side.rear.car")
+                    Image(systemName: "train.side.middle.car")
+                    Image(systemName: "train.side.front.car")
+                    
+                }
+                .transition(.move(edge: .leading))
+                .font(.system(size: 80))
+                .foregroundStyle(Color.blue)
+            }
+            Button{
+               withAnimation(.easeOut(duration: 2.5)){
+                    showTrain = !showTrain
+                }
+            } label: {
+                Text("Show Train")
+            }
         }
-        .font(.system(size: 80))
-        .foregroundStyle(Color.blue)
     
     }
 }
